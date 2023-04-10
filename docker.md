@@ -6,6 +6,7 @@
 <br>
 
 `docker container run contanerName ` -> Executa um container <br>
+`docker container run -it contanerName /bin/bashgd` -> Executa um container no modo iterativo, ou seja acessamos o container <br>
 `docker container ls` -> lista os container em execução <br>
 `docker container ls -a` -> lista os container inclusive os parados <br>
 `docker container inspect contanerName` -> traz detalhes de determinada imagem <br>
@@ -17,11 +18,15 @@
 `docker container top contanerName` -> traz os processos em execução <br>
 `docker container status contanerName` -> traz informações sobre o consumo de recursos como CPU e memória<br>
 `docker container exec contanerName` -> Executa algo no container<br>
+`docker container exec -it contanerName /bin/bash` -> entra no container para executar algum outro comando.<br>
 `docker container attach contanerName` -> Conecta com o container<br>
-<br>
 
-`docker image ls` -> lista as imagens presentes no host <br>
-`docker image rm` -> remove um container parado <br>
+### Parametros
+
+`-it` -> para entrar no container <br>
+`-d` -> para instanciar container e liberar o terminal EX: *docker container run -d nginx* <br>
+`-p` -> para mapear portas do container - **... -p localhost:containerPort** *ex: docker container run -p 8080:80 nginx* <br>
+
 
 ## Services
 
